@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "serverKey": "22445009jjj"
+        "serverkey": "22445009jjjj" 
       },
       body: JSON.stringify({ userInput: message.userInput}),
     })

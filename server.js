@@ -31,7 +31,7 @@ const deepseek = new openai.OpenAI({
     server.post("/get-prompt", async (req, res) => {
         const userInput = req.body?.userInput;
 
-        const requestedKey = req.headers["serverKey"];
+        const requestedKey = req.headers["serverkey"];
 
         if (requestedKey !== process.env.SERVER_KEY) {
             return res.status(401).json({
