@@ -10,6 +10,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     })
       .then((response) => {
         if (!response.ok) {
+           console.log("Response status:", response.status);
           throw new Error("Request failed");
         }
         return response.json();
