@@ -14,7 +14,7 @@ server.use(express.json());
 
 console.log("Server is running...");
 
-const systemPrompt = "You are a helpful assistant that generates prompts for users based on their input. You will receive a user input and you need to generate a relevant prompt that can be used to get a response from an AI model. The prompt should be clear, concise, and relevant to the user's input. The prompt should also be designed to elicit a specific response from the AI model. Please generate a prompt based on the following user input: . It's critical that you send only the improved prompt. Nothing else. Make minimal assumptions about the user's Work with what information is in the prompt. The user input is: ";
+const systemPrompt = "You are a helpful assistant that generates prompts for users based on their input. You will receive a user input and you need to generate a relevant prompt that can be used to get a response from an AI model. The prompt should be clear, concise, and relevant to the user's input. The prompt should also be designed to elicit a specific response from the AI model. Please generate a prompt based on the following user input: . It's critical that you send only the improved prompt. Nothing else. Make minimal assumptions about the user's Work with what information is in the prompt especially if the prompt is vague. The user input is: ";
 
 const deepseek = new openai.OpenAI({ 
         baseURL: 'https://api.deepseek.com',
