@@ -11,33 +11,7 @@ function waitForInput() {
 
   button.style.cursor ="pointer";
 
-  async function getPrompt(userInput) {
-    try {
-      const response = await fetch("https://promptify-server-59a4.onrender.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ userInput }),
-      });
-
-
-       if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.error || "Request failed");
-    }
-      const data = await response.json();
-      
-      console.log("Prompt response:", data.response);
-
-      
-      return data.response;
-
-    } catch (error) {
-      console.error("Error fetching prompt:", error);
-    }
-
-  }
+ 
 
 button.textContent="Promptify";
 button.id="promptify-button";
