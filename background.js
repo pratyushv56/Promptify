@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userInput: message.userInput }),
+      body: JSON.stringify({ userInput: message.userInput, serverKey: "22445009jjj" }),
     })
       .then((response) => {
         if (!response.ok) {
