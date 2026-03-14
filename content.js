@@ -85,9 +85,7 @@ isLoading = true;
 
   }
 
-    else {
-    setTimeout(waitForInput, 500);
-  }
+  
   button.textContent="Promptify";
 
 
