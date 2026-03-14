@@ -1,0 +1,42 @@
+
+
+{
+  "manifest_version": 3,
+  "name": "Promptify",
+  "version": "1.0.0",
+  "description": "A Web extension that converts your AI chats into professional prompts at the click of a button. Compatible with all major AI chat platforms.",
+  "icons": {
+    
+  "16": "icon32.png",
+  "32": "icon32.png",
+  "48": "icon32.png",
+  "128": "icon32.png"
+  
+    
+  },
+  "action": {
+    
+    
+    "default_icon": {
+      "16": "icon32.png",
+      "32": "icon32.png",
+      "48": "icon32.png",
+      "128": "icon32.png"
+    },
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*", "https://chat.openai.com/*","https://www.perplexity.ai/*","https://chatgpt.com/*","https://grok.com/*",
+    "https://claude.ai/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*"
+  ],
+  "background": {
+  "service_worker": "background.js"
+}
+}
