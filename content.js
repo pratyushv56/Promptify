@@ -13,7 +13,7 @@ function waitForInput() {
 
   async function getPrompt(userInput) {
     try {
-      const response = await fetch("http://localhost:3000/get-prompt", {
+      const response = await fetch("https://promptify-server-59a4.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

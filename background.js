@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "GET_PROMPT") {
-    fetch("http://localhost:3000/get-prompt", {
+    fetch("https://promptify-server-59a4.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

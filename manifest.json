@@ -34,7 +34,7 @@
     }
   ],
   "host_permissions": [
-    "http://localhost:3000/*"
+    "https://promptify-server-59a4.onrender.com/*"
   ],
   "background": {
   "service_worker": "background.js"
