@@ -15,7 +15,7 @@ server.use(express.json());
 console.log("Server is running...");
 
 
-const serverKey = process.env.SERVER_KEY;
+
 
 
 
@@ -33,7 +33,7 @@ const deepseek = new openai.OpenAI({
 
         const requestedKey = req.headers["serverKey"];
 
-        if (requestedKey !== serverKey) {
+        if (requestedKey !== process.env.SERVER_KEY) {
             return res.status(401).json({
                 error: "Invalid server key"
             });
