@@ -81,7 +81,7 @@ const deepseek = new openai.OpenAI({
     
 
     server.get("/privacy-policy", (req, res) => {
-        res.sendFile("privacy-policy.html", { root: __dirname });
+        res.sendFile("promptify_privacy_policy.html", { root: __dirname });
     });
 
 
