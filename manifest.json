@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Promptify",
   "version": "1.0.0",
-  "description": "A Web extension that converts your AI chats into professional prompts at the click of a button. Compatible with all major AI chat platforms.",
+  "description": "A Web extension that converts your AI chats into professional prompts at the click of a button.",
   "icons": {
     "16": "icon32.png",
     "32": "icon32.png",
