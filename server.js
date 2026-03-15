@@ -78,5 +78,39 @@ const deepseek = new openai.OpenAI({
     });
 
 
+    const privacyPolicy = `Privacy Policy for Promptify
+
+Promptify is a browser extension that helps users improve prompts using artificial intelligence.
+
+Information Processed
+
+When the extension is used, the prompt text entered by the user may be sent to our backend server in order to generate an improved version of the prompt.
+
+Data Usage
+
+The prompt text is used solely to generate an improved prompt and return it to the extension. This processing is necessary for the core functionality of Promptify.
+
+Data Storage
+
+Promptify does not store user prompts or personal information in a database. Prompt text is processed by the backend service only for generating the improved prompt and is not retained after processing.
+
+Data Sharing
+
+Prompt text may be processed by third-party AI service providers used by our backend infrastructure solely for the purpose of generating the improved prompt.
+
+User Control
+
+The extension only processes text when the user chooses to use Promptify’s functionality.
+
+
+If you have questions about this privacy policy, please contact:
+pratyushv56@gmail.com`;
+
+
+    server.get("/privacy-policy", (req, res) => {
+        res.send(privacyPolicy);
+    }
+
+
     server.listen(process.env.PORT);
 
